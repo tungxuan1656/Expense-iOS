@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Expense
+//  BaseIOS
 //
-//  Created by Tùng Xuân on 12/10/2021.
+//  Created by Tùng Xuân on 15/10/2021.
 //
 
 import UIKit

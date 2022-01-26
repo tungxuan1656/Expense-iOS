@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AddExpenditureViewController.onClickButtonCategory(_:):AddExpenditureViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppData.outCategories">
+            </PersistentString>
+            <PersistentString
+               value = "AppData.defaultInCategories">
+            </PersistentString>
+            <PersistentString
+               value = "AppData.inCategories">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

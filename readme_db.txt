@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS expenditures (
+   id INTEGER PRIMARY KEY,
+   category TEXT NOT NULL,
+   value DOUBLE NOT NULL,
+   note TEXT NOT NULL,
+   source TEXT NOT NULL,
+   day INTEGER NOT NULL);
