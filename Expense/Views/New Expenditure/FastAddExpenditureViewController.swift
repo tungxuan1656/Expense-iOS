@@ -34,9 +34,9 @@ class FastAddExpenditureViewController: UIViewController {
     // MARK: - SetupUI
     func setupUI() {
         self.tableView.register(UINib(nibName: "ExpenditureCell", bundle: nil), forCellReuseIdentifier: "ExpenditureCell")
-        self.tableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 90))
+        self.tableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: 0, height: 50))
         
-        let startTime = Date.fromOrdinalDay(Date().ordinalDay() - 30)
+        let startTime = Date.fromOrdinalDay(Date().ordinalDay() - 15)
         let endTime = Date()
         self.expenditures = AppData.getExpenditures(start: startTime, end: endTime)
         for ex in self.expenditures {

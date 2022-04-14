@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ico_anuong.png",
+      "filename" : "ico_antiem.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ico_anuong@2x.png",
+      "filename" : "ico_antiem@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ico_anuong@3x.png",
+      "filename" : "ico_antiem@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

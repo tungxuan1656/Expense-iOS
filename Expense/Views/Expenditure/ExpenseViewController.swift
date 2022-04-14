@@ -63,10 +63,6 @@ class ExpenseViewController: UIViewController {
     
     func getExpenditures() {
         self.expenditures = AppData.getExpenditures(start: self.startTime, end: self.endTime)
-//        for i in self.expenditures {
-//            print(i.description)
-//        }
-        
         self.clasifyExpenditures()
     }
     

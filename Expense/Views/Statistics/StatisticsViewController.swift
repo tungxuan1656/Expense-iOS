@@ -19,7 +19,9 @@ class StatisticsViewController: UIViewController {
     @IBOutlet weak var labelIn: UILabel!
     @IBOutlet weak var labelSummary: UILabel!
     
-    @IBOutlet weak var pieChartSource: PieChartView!
+    @IBOutlet weak var stackViewRank: UIStackView!
+    
+//    @IBOutlet weak var pieChartSource: PieChartView!
     @IBOutlet weak var pieChartCategory: PieChartView!
     
     var refreshControl = UIRefreshControl()
@@ -52,6 +54,8 @@ class StatisticsViewController: UIViewController {
 
     // MARK: - SetupUI
     func setupUI() {
+        self.startTime = self.endTime.dateFor(.startOfMonth)
+        
         self.refreshControl.addTarget(self, action: #selector(refreshUI), for: .valueChanged)
         self.scrollViewContent.refreshControl = self.refreshControl
         
@@ -74,6 +78,7 @@ class StatisticsViewController: UIViewController {
                 outCategoryEntries.append(.init(value: -y, label: k.rawValue))
             }
         }
+
         outCategoryEntries = Array(outCategoryEntries.sorted { $0.value > $1.value }.prefix(5))
         let v = -self.valueOut - outCategoryEntries.map { $0.value }.reduce(0, +)
         outCategoryEntries.append(.init(value: v, label: "Khác"))
@@ -84,18 +89,38 @@ class StatisticsViewController: UIViewController {
         let outCategoryData = PieChartData(dataSet: outCategorySet)
         self.pieChartCategory.data = outCategoryData
         
-        var sourceEntries = [PieChartDataEntry]()
-        for k in self.dictSource.keys {
-            if let y = self.dictSource[k] {
-                sourceEntries.append(.init(value: -y, label: k))
-            }
+        let dictSortedCategories = dictOutCategory.sorted { $0.value < $1.value }
+        print(dictSortedCategories)
+        
+        for v in self.stackViewRank.arrangedSubviews { v.removeFromSuperview() }
+        for d in dictSortedCategories {
+            let v = UITableViewCell(style: .value1, reuseIdentifier: "")
+            v.textLabel?.text = d.key.rawValue
+            v.textLabel?.textColor = UIColor(named: "Title")
+            v.textLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+            v.detailTextLabel?.text = Currency.vnd.get(d.value)
+            v.detailTextLabel?.textColor = UIColor(named: "Feature")
+            v.detailTextLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
+            v.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            self.stackViewRank.addArrangedSubview(v)
+            let l = UIView()
+            l.heightAnchor.constraint(equalToConstant: 1).isActive = true
+            l.backgroundColor = UIColor(named: "GrayBG")
+            self.stackViewRank.addArrangedSubview(l)
         }
-        let sourceSet = PieChartDataSet(entries: sourceEntries, label: "")
-        sourceSet.colors = ChartColorTemplates.joyful() + ChartColorTemplates.liberty()
-        sourceSet.entryLabelColor = .clear
-        sourceSet.valueTextColor = .clear
-        let sourceData = PieChartData(dataSet: sourceSet)
-        self.pieChartSource.data = sourceData
+        
+//        var sourceEntries = [PieChartDataEntry]()
+//        for k in self.dictSource.keys {
+//            if let y = self.dictSource[k] {
+//                sourceEntries.append(.init(value: -y, label: k))
+//            }
+//        }
+//        let sourceSet = PieChartDataSet(entries: sourceEntries, label: "")
+//        sourceSet.colors = ChartColorTemplates.joyful() + ChartColorTemplates.liberty()
+//        sourceSet.entryLabelColor = .clear
+//        sourceSet.valueTextColor = .clear
+//        let sourceData = PieChartData(dataSet: sourceSet)
+//        self.pieChartSource.data = sourceData
         self.refreshControl.endRefreshing()
     }
     

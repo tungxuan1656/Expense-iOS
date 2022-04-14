@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,18 +31,92 @@
                         <action selector="dismiss" destination="-1" eventType="touchUpInside" id="snG-Ey-Hzi"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUp-h1-hu1">
-                    <rect key="frame" x="0.0" y="389" width="414" height="507"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUp-h1-hu1">
+                    <rect key="frame" x="0.0" y="366" width="414" height="530"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Frl-hk-QHB">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="471"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="494"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DG2-SJ-glq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-d6-scX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaQ-vC-zoL">
+                                            <rect key="frame" x="20" y="10" width="94" height="28"/>
+                                            <color key="backgroundColor" red="0.96100002527236938" green="0.34900000691413879" blue="0.44699999690055847" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="tintColor" name="White"/>
+                                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Tháng trước"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="14"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" red="0.93333333330000001" green="0.61176470589999998" blue="0.65490196079999996" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onClickButtonPreviousMonth:" destination="-1" eventType="touchUpInside" id="0OE-Kq-E8D"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-r3-MrF">
+                                            <rect key="frame" x="130" y="10" width="85" height="28"/>
+                                            <color key="backgroundColor" red="0.96100002527236938" green="0.34900000691413879" blue="0.44699999690055847" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="tintColor" name="White"/>
+                                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Tuần trước"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="14"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" red="0.93333333330000001" green="0.61176470589999998" blue="0.65490196079999996" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onClickButtonPreviousWeek:" destination="-1" eventType="touchUpInside" id="18o-1x-IdN"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="20l-FO-F1R"/>
+                                        <constraint firstItem="BaQ-vC-zoL" firstAttribute="leading" secondItem="dsM-d6-scX" secondAttribute="leading" constant="20" id="8bm-Uh-5WC"/>
+                                        <constraint firstItem="Dfl-r3-MrF" firstAttribute="top" secondItem="dsM-d6-scX" secondAttribute="top" constant="10" id="BSM-Tb-Ea9"/>
+                                        <constraint firstItem="BaQ-vC-zoL" firstAttribute="top" secondItem="dsM-d6-scX" secondAttribute="top" constant="10" id="DT6-bT-0xP"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dfl-r3-MrF" secondAttribute="bottom" constant="10" id="Dkm-bt-x2y"/>
+                                        <constraint firstItem="Dfl-r3-MrF" firstAttribute="leading" secondItem="BaQ-vC-zoL" secondAttribute="trailing" constant="16" id="HZQ-Xy-Fzg"/>
+                                        <constraint firstAttribute="bottom" secondItem="BaQ-vC-zoL" secondAttribute="bottom" constant="10" id="Mbm-sX-FkB"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEn-Ex-UGM">
+                                    <rect key="frame" x="0.0" y="48" width="414" height="1"/>
+                                    <color key="backgroundColor" name="Line"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="emx-NB-N4e"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DG2-SJ-glq">
+                                    <rect key="frame" x="0.0" y="49" width="414" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPo-oO-AmA">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="70"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="188.5" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="10/10/2021">
                                                 <color key="titleColor" name="Title"/>
@@ -54,9 +128,18 @@
                                                 <action selector="onClickButtonStartDate:" destination="-1" eventType="touchUpInside" id="WFX-sW-iBV"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zu-hY-YGG">
+                                            <rect key="frame" x="188.5" y="0.0" width="30" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Rl5-Zb-T3t"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-Q7-ISQ">
-                                            <rect key="frame" x="207" y="0.0" width="207" height="70"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <rect key="frame" x="218.5" y="0.0" width="195.5" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="20/10/2021">
                                                 <color key="titleColor" name="Title"/>
@@ -70,18 +153,18 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="70" id="QmQ-nC-8gw"/>
+                                        <constraint firstAttribute="height" constant="50" id="QmQ-nC-8gw"/>
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ry8-Km-BWZ">
-                                    <rect key="frame" x="0.0" y="70" width="414" height="1"/>
+                                    <rect key="frame" x="0.0" y="99" width="414" height="1"/>
                                     <color key="backgroundColor" name="Line"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="lyz-fY-f8G"/>
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sbz-wX-73B">
-                                    <rect key="frame" x="0.0" y="71" width="414" height="350"/>
+                                    <rect key="frame" x="0.0" y="100" width="414" height="350"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-ro-hos">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -92,6 +175,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="350" id="dft-1F-mKy"/>
                                                     </constraints>
+                                                    <locale key="locale" localeIdentifier="vi_VN"/>
                                                 </datePicker>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,17 +189,17 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-3n-NHC">
-                                    <rect key="frame" x="0.0" y="421" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="450" width="414" height="44"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8E-Xf-GiN">
-                                            <rect key="frame" x="25" y="0.0" width="364" height="50"/>
+                                            <rect key="frame" x="25" y="0.0" width="364" height="44"/>
                                             <color key="backgroundColor" name="Feature"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="Lid-j2-PQz"/>
+                                                <constraint firstAttribute="height" constant="44" id="Lid-j2-PQz"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="Done">
+                                            <state key="normal" title="Xong">
                                                 <color key="titleColor" name="White"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>

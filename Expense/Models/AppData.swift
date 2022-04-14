@@ -23,26 +23,21 @@ class AppData {
     
     // MARK: - Defaults
     private static let defaultInCategories: [Category] = [
-        .dautu, .vaytien, .nhantien, .kinhdoanh, .thuhoino, .mungtang, .khac
+        .dautu, .vaytien, .nhantien, .thuhoino, .khac
     ]
     
     private static let defaultOutCategories: [Category] = [
-        .anuong, .dicho, .antiem, .anvat, .caphetrada,
-        .sinhhoatphi, .dien, .nuoc, .internet, .truyenhinh, .gas, .dienthoai,
-        .dilai, .xangdau, .vetauxe, .taxi,
-        .giaitri, .xemphim, .dulich, .amnhac, .game,
-        .suckhoelamdep, .thethao, .quanao, .mypham, .chuabenh, .thuoc,
-        .nhacua, .thuenha, .samdo, .thucung, .suachua, .giupviec,
-        .concai,
-        .phattrien, .hocphi, .sach,
-        .xagiao,
-        .chovay,
-        .vaytien,
-        .trano,
-        .dautu,
-        .tuthien,
-        .trocapgiadinh,
-        .khac
+        .anuong, .dicho, .sinhhoatphi,
+        .diennuoc, .mangtruyenhinh, .gas,
+        .xangdau, .vetauxe,
+        .dichoidian, .xemphim, .dulich,
+        .sothich, .lamdep, .thethao,
+        .suckhoe,
+        .thuenha, .samdo, .thucung, .suachua,
+        .concai, .phattrien,
+        .xagiao, .chovay, .trano,
+        .tuthien, .trocapgiadinh,
+        .dautu, .khac
     ]
     
     // MARK: - Cache

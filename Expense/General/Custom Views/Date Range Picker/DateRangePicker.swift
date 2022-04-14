@@ -103,4 +103,46 @@ class DateRangePicker: UIViewController {
             self.buttonEndDate.setTitle(self.endTime.toString(format: .custom("dd/MM/yyyy")), for: .normal)
         }
     }
+    
+    @IBAction func onClickButtonPreviousMonth(_ sender: Any) {
+        let now = Date()
+        let nowPreviousMonth = Calendar.current.date(byAdding: .month, value: -1, to: now)
+        let startPreviousMonth = nowPreviousMonth?.dateFor(.startOfMonth)
+        let endPreviousMonth = nowPreviousMonth?.dateFor(.endOfMonth)
+        if let start = startPreviousMonth, let end = endPreviousMonth {
+            self.startTime = start
+            self.endTime = end
+            if self.pickStartTime {
+                self.datePicker.date = start
+                self.datePicker.maximumDate = end
+            }
+            else {
+                self.datePicker.date = end
+                self.datePicker.minimumDate = start
+            }
+            self.buttonStartDate.setTitle(self.startTime.toString(format: .custom("dd/MM/yyyy")), for: .normal)
+            self.buttonEndDate.setTitle(self.endTime.toString(format: .custom("dd/MM/yyyy")), for: .normal)
+        }
+    }
+    
+    @IBAction func onClickButtonPreviousWeek(_ sender: Any) {
+        let now = Date()
+        let nowPreviousWeek = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: now)
+        let startPreviousWeek = nowPreviousWeek?.dateFor(.startOfWeek)
+        let endPreviousWeek = nowPreviousWeek?.dateFor(.endOfWeek)
+        if let start = startPreviousWeek, let end = endPreviousWeek {
+            self.startTime = start
+            self.endTime = end.dateFor(.tomorrow)
+            if self.pickStartTime {
+                self.datePicker.date = start
+                self.datePicker.maximumDate = end.dateFor(.tomorrow)
+            }
+            else {
+                self.datePicker.date = end.dateFor(.tomorrow)
+                self.datePicker.minimumDate = start
+            }
+            self.buttonStartDate.setTitle(self.startTime.toString(format: .custom("dd/MM/yyyy")), for: .normal)
+            self.buttonEndDate.setTitle(self.endTime.toString(format: .custom("dd/MM/yyyy")), for: .normal)
+        }
+    }
 }
