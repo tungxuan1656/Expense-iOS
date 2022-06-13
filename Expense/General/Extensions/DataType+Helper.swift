@@ -246,6 +246,13 @@ extension String {
             return self
         }
     }
+    
+    func search(_ text: String) -> Bool {
+        let t = text.folding(options: .diacriticInsensitive, locale: .current).replacingOccurrences(of: "Đ", with: "d").lowercased()
+        let nn = self.folding(options: .diacriticInsensitive, locale: .current).replacingOccurrences(of: "Đ", with: "d").lowercased()
+        if nn.range(of: t) != nil { return true }
+        return false
+    }
 }
 
 extension Data {
