@@ -59,7 +59,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-Br-YcK">
                                         <rect key="frame" x="298" y="0.0" width="61" height="41.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="100000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkI-gN-SSd" userLabel="Value">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" text="100000" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkI-gN-SSd" userLabel="Value">
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="41.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" name="Moss"/>

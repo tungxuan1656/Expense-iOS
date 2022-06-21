@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UITextField.appearance().tintColor = .link
+        UITabBar.appearance().tintColor = UIColor(named: "Feature")
+//        UITabBar.appearance().selectedItem?.
         
         // load data
         AppData.loadSources()

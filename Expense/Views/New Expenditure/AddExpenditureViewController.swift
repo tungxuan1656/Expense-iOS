@@ -22,6 +22,7 @@ class AddExpenditureViewController: UIViewController {
     @IBOutlet weak var buttonCategory: UIButton!
     @IBOutlet weak var buttonSource: UIButton!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var viewCategory: UIView!
     
     var expenditure: Expenditure? = nil
     var category: Category = .khac
@@ -29,6 +30,9 @@ class AddExpenditureViewController: UIViewController {
     var mode = Mode.Out
     var add: ((_ ex: Expenditure) -> Void)? = nil
     var delete: ((_ ex: Expenditure) -> Void)? = nil
+    var done: ((_ ex: Expenditure) -> Void)? = nil
+    
+    var isBigSpending = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +75,9 @@ class AddExpenditureViewController: UIViewController {
             self.textFieldValue.becomeFirstResponder()
         }
         self.textFieldValue.textColor = self.mode == .Out ? UIColor(named: "Feature") : UIColor(named: "Green")
-        
+        if self.isBigSpending {
+            self.viewCategory.isHidden = true
+        }
         
         self.refreshUI()
     }
@@ -91,16 +97,20 @@ class AddExpenditureViewController: UIViewController {
         guard let text = self.textFieldValue.text?.trim() else { return }
         let s = regex.stringByReplacingMatches(in: text, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, text.count), withTemplate: "")
         guard var value = Double(s) else { return }
+        value = self.mode == .In ? value : -value
+        let ex = Expenditure(id: 0, day: self.datePicker.date, category: self.category, value: value, note: self.textFieldNote.text?.trim() ?? "", source: self.source)
+        
+        if (self.isBigSpending) {
+            self.done?(ex)
+            self.dismiss()
+            return
+        }
         
         // delete
         if let ex = self.expenditure { self.delete?(ex) }
         
         // add new
-        value = self.mode == .In ? value : -value
-        
-        let ex = Expenditure(id: 0, day: self.datePicker.date, category: self.category, value: value, note: self.textFieldNote.text?.trim() ?? "", source: self.source)
-        
-        let id = DB.shared.insert(expenditure: ex)
+        let id = DB.shared.tbExpenditure.insert(expenditure: ex)
         if id != 0 {
             ex.id = id
             self.add?(ex)

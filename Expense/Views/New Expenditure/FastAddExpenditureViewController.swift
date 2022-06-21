@@ -48,7 +48,7 @@ class FastAddExpenditureViewController: UIViewController {
     
     // MARK: - Utils
     func addNew(ex: Expenditure) {
-        let id = DB.shared.insert(expenditure: ex)
+        let id = DB.shared.tbExpenditure.insert(expenditure: ex)
         if id != 0 {
             ex.id = id
             self.add?(ex)

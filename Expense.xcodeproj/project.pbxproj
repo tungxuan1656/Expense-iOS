@@ -12,6 +12,9 @@
 		972C1CD92736C296009374D6 /* DateRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C1CD72736C296009374D6 /* DateRangePicker.swift */; };
 		972C1CDA2736C296009374D6 /* DateRangePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972C1CD82736C296009374D6 /* DateRangePicker.xib */; };
 		97354957271B1EAC003A73D2 /* AddExpenditureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97354955271B1EAC003A73D2 /* AddExpenditureViewController.swift */; };
+		974C6006286052CC00F372F4 /* BigSpendingGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C6005286052CC00F372F4 /* BigSpendingGroupsViewController.swift */; };
+		974C600D2860553400F372F4 /* BigSpendingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C600C2860553400F372F4 /* BigSpendingGroup.swift */; };
+		974C600F2860640C00F372F4 /* BigSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974C600E2860640C00F372F4 /* BigSpendingViewController.swift */; };
 		977A105E27199508002CE08A /* ExpenditureHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977A105D27199508002CE08A /* ExpenditureHeader.xib */; };
 		977A106027199572002CE08A /* ExpenditureHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977A105F27199572002CE08A /* ExpenditureHeader.swift */; };
 		97935174271BC18E00E0BF87 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97935173271BC18E00E0BF87 /* SelectViewController.swift */; };
@@ -53,6 +56,9 @@
 		972C1CD72736C296009374D6 /* DateRangePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePicker.swift; sourceTree = "<group>"; };
 		972C1CD82736C296009374D6 /* DateRangePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateRangePicker.xib; sourceTree = "<group>"; };
 		97354955271B1EAC003A73D2 /* AddExpenditureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenditureViewController.swift; sourceTree = "<group>"; };
+		974C6005286052CC00F372F4 /* BigSpendingGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpendingGroupsViewController.swift; sourceTree = "<group>"; };
+		974C600C2860553400F372F4 /* BigSpendingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpendingGroup.swift; sourceTree = "<group>"; };
+		974C600E2860640C00F372F4 /* BigSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSpendingViewController.swift; sourceTree = "<group>"; };
 		975851E9272125BE003805CA /* Expense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Expense.entitlements; sourceTree = "<group>"; };
 		977A105D27199508002CE08A /* ExpenditureHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenditureHeader.xib; sourceTree = "<group>"; };
 		977A105F27199572002CE08A /* ExpenditureHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenditureHeader.swift; sourceTree = "<group>"; };
@@ -168,12 +174,22 @@
 			path = "New Expenditure";
 			sourceTree = "<group>";
 		};
+		974C60042860527C00F372F4 /* Big Spending */ = {
+			isa = PBXGroup;
+			children = (
+				974C6005286052CC00F372F4 /* BigSpendingGroupsViewController.swift */,
+				974C600E2860640C00F372F4 /* BigSpendingViewController.swift */,
+			);
+			path = "Big Spending";
+			sourceTree = "<group>";
+		};
 		97B90AAB27184188002A3896 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9735494E271B1E16003A73D2 /* Expenditure */,
 				97354952271B1E3A003A73D2 /* New Expenditure */,
 				9735494F271B1E1E003A73D2 /* Statistics */,
+				974C60042860527C00F372F4 /* Big Spending */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +213,7 @@
 				97D52EEE271883C2005A8081 /* AppData.swift */,
 				97E6465D2719298900290F1C /* Category.swift */,
 				97AE0CB7271AD3CE000E391F /* ExSummary.swift */,
+				974C600C2860553400F372F4 /* BigSpendingGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,10 +390,13 @@
 				977A106027199572002CE08A /* ExpenditureHeader.swift in Sources */,
 				97D2071427159ED7008BA897 /* AppDelegate.swift in Sources */,
 				97B90AC62718428C002A3896 /* View+Helper.swift in Sources */,
+				974C600F2860640C00F372F4 /* BigSpendingViewController.swift in Sources */,
 				97E6465E2719298900290F1C /* Category.swift in Sources */,
 				97B90AB1271841DD002A3896 /* Global.swift in Sources */,
 				97B90AC82718428C002A3896 /* ViewController+Helper.swift in Sources */,
 				97B90ACE2718428C002A3896 /* Date+Helper.swift in Sources */,
+				974C600D2860553400F372F4 /* BigSpendingGroup.swift in Sources */,
+				974C6006286052CC00F372F4 /* BigSpendingGroupsViewController.swift in Sources */,
 				97B90AC52718428C002A3896 /* ImageView+RotateAnimation.swift in Sources */,
 				97B90AD727184954002A3896 /* StatisticsViewController.swift in Sources */,
 				97B90ACD2718428C002A3896 /* HUD.swift in Sources */,

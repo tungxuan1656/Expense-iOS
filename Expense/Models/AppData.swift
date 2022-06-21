@@ -17,9 +17,12 @@ class AppData {
         let s = start.ordinalDay()
         let e = end.ordinalDay()
         // Log.m(s, e)
-        return DB.shared.select(start: s, end: e)
+        return DB.shared.tbExpenditure.select(start: s, end: e)
     }
     
+    static func getBigSpendingGroups() -> [BigSpendingGroup] {
+        return DB.shared.tbBigSpendingGroup.select()
+    }
     
     // MARK: - Defaults
     private static let defaultInCategories: [Category] = [
