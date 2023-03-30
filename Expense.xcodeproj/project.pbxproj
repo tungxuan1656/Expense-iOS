@@ -38,7 +38,6 @@
 		97B90AD02718478B002A3896 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B90ACF2718478B002A3896 /* Logger.swift */; };
 		97B90AD327184929002A3896 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B90AD127184929002A3896 /* ExpenseViewController.swift */; };
 		97B90AD727184954002A3896 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B90AD527184954002A3896 /* StatisticsViewController.swift */; };
-		97C178B72737D6150031E123 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 97C178B62737D6150031E123 /* Charts */; };
 		97D2071427159ED7008BA897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2071327159ED7008BA897 /* AppDelegate.swift */; };
 		97D2071B27159ED7008BA897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2071927159ED7008BA897 /* Main.storyboard */; };
 		97D2071D27159ED9008BA897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D2071C27159ED9008BA897 /* Assets.xcassets */; };
@@ -103,7 +102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				972C1CD02736253A009374D6 /* SQLite in Frameworks */,
-				97C178B72737D6150031E123 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +319,6 @@
 			name = Expense;
 			packageProductDependencies = (
 				972C1CCF2736253A009374D6 /* SQLite */,
-				97C178B62737D6150031E123 /* Charts */,
 			);
 			productName = Expense;
 			productReference = 97D2071027159ED7008BA897 /* Expense.app */;
@@ -353,7 +350,6 @@
 			mainGroup = 97D2070727159ED7008BA897;
 			packageReferences = (
 				972C1CCE2736253A009374D6 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
-				97C178B52737D6150031E123 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 97D2071127159ED7008BA897 /* Products */;
 			projectDirPath = "";
@@ -566,10 +562,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Expense/Expense.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9PQL5SS3D;
+				DEVELOPMENT_TEAM = UVLTTQM79B;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Expense/Info.plist;
@@ -590,7 +586,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tungxuan.Expense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Dev] MDC Wildcard Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -604,10 +600,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Expense/Expense.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9PQL5SS3D;
+				DEVELOPMENT_TEAM = UVLTTQM79B;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Expense/Info.plist;
@@ -628,7 +624,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tungxuan.Expense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Dev] MDC Wildcard Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -668,14 +664,6 @@
 				version = 0.13.0;
 			};
 		};
-		97C178B52737D6150031E123 /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -683,11 +671,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 972C1CCE2736253A009374D6 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
 			productName = SQLite;
-		};
-		97C178B62737D6150031E123 /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 97C178B52737D6150031E123 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

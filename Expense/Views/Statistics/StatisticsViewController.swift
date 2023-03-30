@@ -22,7 +22,7 @@ class StatisticsViewController: UIViewController {
     @IBOutlet weak var stackViewRank: UIStackView!
     
 //    @IBOutlet weak var pieChartSource: PieChartView!
-    @IBOutlet weak var pieChartCategory: PieChartView!
+//    @IBOutlet weak var pieChartCategory: PieChartView!
     
     var refreshControl = UIRefreshControl()
     var expenditures: [Expenditure] = []
@@ -72,22 +72,22 @@ class StatisticsViewController: UIViewController {
         self.labelSummary.text = Currency.vnd.get(self.valueSummary)
         self.labelSummary.textColor = self.valueSummary >= 0 ? UIColor(named: "Green") : UIColor(named: "Feature")
         
-        var outCategoryEntries = [PieChartDataEntry]()
-        for k in self.dictOutCategory.keys {
-            if let y = self.dictOutCategory[k] {
-                outCategoryEntries.append(.init(value: -y, label: k.rawValue))
-            }
-        }
+//        var outCategoryEntries = [PieChartDataEntry]()
+//        for k in self.dictOutCategory.keys {
+//            if let y = self.dictOutCategory[k] {
+//                outCategoryEntries.append(.init(value: -y, label: k.rawValue))
+//            }
+//        }
 
-        outCategoryEntries = Array(outCategoryEntries.sorted { $0.value > $1.value }.prefix(5))
-        let v = -self.valueOut - outCategoryEntries.map { $0.value }.reduce(0, +)
-        outCategoryEntries.append(.init(value: v, label: "Khác"))
-        let outCategorySet = PieChartDataSet(entries: outCategoryEntries, label: "")
-        outCategorySet.entryLabelColor = .clear
-        outCategorySet.valueTextColor = .clear
-        outCategorySet.colors = ChartColorTemplates.colorful() + ChartColorTemplates.material()
-        let outCategoryData = PieChartData(dataSet: outCategorySet)
-        self.pieChartCategory.data = outCategoryData
+//        outCategoryEntries = Array(outCategoryEntries.sorted { $0.value > $1.value }.prefix(5))
+//        let v = -self.valueOut - outCategoryEntries.map { $0.value }.reduce(0, +)
+//        outCategoryEntries.append(.init(value: v, label: "Khác"))
+//        let outCategorySet = PieChartDataSet(entries: outCategoryEntries, label: "")
+//        outCategorySet.entryLabelColor = .clear
+//        outCategorySet.valueTextColor = .clear
+//        outCategorySet.colors = ChartColorTemplates.colorful() + ChartColorTemplates.material()
+//        let outCategoryData = PieChartData(dataSet: outCategorySet)
+//        self.pieChartCategory.data = outCategoryData
         
         let dictSortedCategories = dictOutCategory.sorted { $0.value < $1.value }
         print(dictSortedCategories)
